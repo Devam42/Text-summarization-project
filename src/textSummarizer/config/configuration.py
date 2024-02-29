@@ -4,9 +4,9 @@ from textSummarizer.entity import (DataIngestionConfig)
 
 class ConfigurationManager:
     def __init__(
-        self, root_dir, source_URL, local_data_file, unzip_dir,
+        self,
         config_filepath = CONFIG_FILE_PATH,
-        params_filepath = PARAMS_FILE_PATH,):
+        params_filepath = PARAMS_FILE_PATH):
 
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
@@ -24,7 +24,7 @@ class ConfigurationManager:
             root_dir=config.root_dir,
             source_URL=config.source_URL,
             local_data_file=config.local_data_file,
-            unzip_dir=config.unzip_dir 
+            unzip_dir=config.unzip_dir
         )
 
         return data_ingestion_config
